@@ -7,9 +7,17 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
+      - name: Generate Token
+        uses: actions/create-github-app-token@v1.12.0
+        id: generate-token
+        with:
+          app-id: ${{ secrets.app_id }}
+          private-key: ${{ secrets.app_private_key }}
+          owner: ${{ github.repository_owner }}
+
       - uses: actions/stale@v10
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ steps.generate-token.outputs.token }}
           # Staling issues and PR's
           days-before-stale: 30
           stale-issue-label: stale
