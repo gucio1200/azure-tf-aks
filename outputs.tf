@@ -1,5 +1,5 @@
 output "cluster_id" {
-  description = "ID zasobu klastra AKS w Azure"
+  description = "ID zasobu klastra AKS w Azure heh"
   value       = azurerm_kubernetes_cluster.this.id
 }
 
