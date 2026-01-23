@@ -93,6 +93,8 @@ jobs:
     name: Max TF pre-commit
     runs-on: ubuntu-latest
     needs: collectInputs
+    permissions:
+      contents: write
     steps:
       - name: Install rmz
         uses: jaxxstorm/action-install-gh-release@v2.1.0
@@ -142,3 +144,8 @@ jobs:
           tflint-version: ${{ env.TFLINT_VERSION }}
           terraform-docs-version: ${{ env.TERRAFORM_DOCS_VERSION }}
           install-hcledit: true
+
+      - name: Commit files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Update terraform-docs"
