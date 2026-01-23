@@ -7,7 +7,8 @@ repos:
         args:
           - '--args=--lockfile=false'
           - '--args=--output-mode=replace'
-          - '--args=--create-file-if-not-exist=true'
+          - '--hook-config=--path-to-file=README.md'
+          - '--hook-config=--create-file-if-not-exist=true'
       - id: terraform_tflint
         args:
           - '--args=--only=terraform_deprecated_interpolation'
