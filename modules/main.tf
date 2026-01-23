@@ -9,10 +9,10 @@ resource "azurerm_kubernetes_cluster" "this" {
     name                 = "default"
     node_count           = var.node_count
     vm_size              = var.vm_size
-    auto_scaling_enabled = true   # Włączamy autoskalowanie
-    min_count            = 1      # Minimum węzłów
-    max_count            = 5      # Maksimum węzłów
-    vnet_subnet_id       = null   # Tutaj można dodać ID podsieci, jeśli integrujesz z VNet
+    auto_scaling_enabled = true # Włączamy autoskalowanie
+    min_count            = 1    # Minimum węzłów
+    max_count            = 5    # Maksimum węzłów
+    vnet_subnet_id       = null # Tutaj można dodać ID podsieci, jeśli integrujesz z VNet
   }
 
   # Używamy Managed Identity zamiast Service Principal (bezpieczniej)
