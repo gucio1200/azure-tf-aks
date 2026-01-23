@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1](https://github.com/gucio1200/azure-tf-aks/compare/v1.2.0...v1.2.1) (2026-01-23)
+
+### Bug Fixes
+
+* Reconfigure release workflow ([0d71136](https://github.com/gucio1200/azure-tf-aks/commit/0d71136da34459b4f5aa3557dea70ffc571d668d))
+* Set to replace mode ([2bc46f4](https://github.com/gucio1200/azure-tf-aks/commit/2bc46f485781d86966646d8dfd8ab12e32b5fbf9))
+
 ## [1.2.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.1.0...v1.2.0) (2026-01-23)
 
 ### Features
