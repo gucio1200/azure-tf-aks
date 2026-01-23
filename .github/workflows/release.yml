@@ -8,8 +8,11 @@ on:
       - master
     paths:
       - '**/*.tpl'
+      - '**/*.tmpl'
       - '**/*.py'
       - '**/*.tf'
+      - '**/*.yml'
+      - '**/*.yaml'
       - '.github/workflows/release.yml'
 
 jobs:
