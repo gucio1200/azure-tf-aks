@@ -6,14 +6,14 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v5
       with:
         ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Render terraform docs and push changes back to PR
-      uses: terraform-docs/gh-actions@v1.0.0
+      uses: terraform-docs/gh-actions@v1.4.1
       with:
         working-dir: .
         output-file: README.md
-        method: inject
+        output-method: inject
         git-push: "true"
