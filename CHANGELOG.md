@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.0.2...v1.1.0) (2026-01-23)
+
+### Features
+
+* add docs ([3cf0370](https://github.com/gucio1200/azure-tf-aks/commit/3cf037039a0ea2e6a5a4b9d5a900435bfce0478c))
+* add docs workflow ([77ad740](https://github.com/gucio1200/azure-tf-aks/commit/77ad740dc6208e82da6fa8b17b427cdf7ab91316))
+
 ## [1.0.2](https://github.com/gucio1200/azure-tf-aks/compare/v1.0.1...v1.0.2) (2026-01-23)
 
 ### Bug Fixes
