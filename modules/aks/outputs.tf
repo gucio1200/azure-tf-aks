@@ -17,7 +17,7 @@ output "kube_config_raw" {
 output "cluster_endpoint" {
   description = "Adres endpointu API serwera Kubernetes"
   # POPRAWKA: Zmiana z .0.host na [0].host
-  value       = azurerm_kubernetes_cluster.this.kube_config[0].host
+  value = azurerm_kubernetes_cluster.this.kube_config[0].host
 }
 
 output "identity_principal_id" {
