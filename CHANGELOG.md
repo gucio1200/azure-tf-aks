@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2](https://github.com/gucio1200/azure-tf-aks/compare/v1.2.1...v1.2.2) (2026-01-24)
+
+### Bug Fixes
+
+* Docs, check tf max version ([#5](https://github.com/gucio1200/azure-tf-aks/issues/5)) ([498d844](https://github.com/gucio1200/azure-tf-aks/commit/498d8447d38404c95f5fee68ad1783220c82b3b5))
+
 ## [1.2.1](https://github.com/gucio1200/azure-tf-aks/compare/v1.2.0...v1.2.1) (2026-01-23)
 
 ### Bug Fixes
