@@ -5,18 +5,49 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-    - uses: actions/checkout@v5
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
-    - name: Render terraform docs and push changes back to PR
-      uses: terraform-docs/gh-actions@v1.4.1
-      with:
-        working-dir: .
-        output-file: README.md
-        output-method: inject
-        git-push: "true"
+      - name: Generate Token
+        uses: actions/create-github-app-token@v1.12.0
+        id: generate-token
+        with:
+          app-id: ${{ secrets.app_id }}
+          private-key: ${{ secrets.app_private_key }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Install terraform-docs
+        run: |
+          # Download to the runner's temp directory to avoid polluting the workspace
+          # Using v0.19.0 as a stable default, adjust version if needed
+          curl -Lo "$RUNNER_TEMP/terraform-docs.tar.gz" https://github.com/terraform-docs/terraform-docs/releases/download/v0.20.0/terraform-docs-v0.20.0-$(uname)-amd64.tar.gz
+          tar -xzf "$RUNNER_TEMP/terraform-docs.tar.gz" -C "$RUNNER_TEMP"
+          chmod +x "$RUNNER_TEMP/terraform-docs"
+
+      - name: Render terraform docs
+        run: |
+          # Run the binary from temp
+          "$RUNNER_TEMP/terraform-docs" markdown table \
+            --output-file README.md \
+            --output-mode inject \
+            .
+
+      - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Explicitly stage ONLY README.md
+          git add README.md
+          # Check if there are changes staged for commit
+          if ! git diff --cached --exit-code; then
+            git commit -m "docs: Update README.md"
+            git config --local --unset-all http.https://github.com/.extraheader || true
+            git remote set-url origin "https://x-access-token:$GH_TOKEN@github.com/${{ github.repository }}.git"
+            git push
+          else
+            echo "No changes to README.md detected."
+          fi
