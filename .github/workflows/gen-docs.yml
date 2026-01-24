@@ -18,19 +18,33 @@ jobs:
           private-key: ${{ secrets.app_private_key }}
           owner: ${{ github.repository_owner }}
 
-      - name: Render terraform docs and push changes back to PR
-        uses: terraform-docs/gh-actions@v1.4.1
-        with:
-          working-dir: .
-          output-file: README.md
-          output-method: inject
-          git-push: false
+      - name: Install terraform-docs
+        run: |
+          # Download to the runner's temp directory to avoid polluting the workspace
+          # Using v0.19.0 as a stable default, adjust version if needed
+          curl -Lo "$RUNNER_TEMP/terraform-docs.tar.gz" https://github.com/terraform-docs/terraform-docs/releases/download/v0.20.0/terraform-docs-v0.20.0-$(uname)-amd64.tar.gz
+          tar -xzf "$RUNNER_TEMP/terraform-docs.tar.gz" -C "$RUNNER_TEMP"
+          chmod +x "$RUNNER_TEMP/terraform-docs"
+
+      - name: Render terraform docs
+        run: |
+          # Run the binary from temp
+          "$RUNNER_TEMP/terraform-docs" markdown table \
+            --output-file README.md \
+            --output-mode inject \
+            .
 
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -am "docs: update README.md"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+          # Explicitly stage ONLY README.md
+          git add README.md
+          # Check if there are changes staged for commit
+          if ! git diff --cached --exit-code; then
+            git commit -m "docs: Update README.md"
+            git remote set-url origin https://x-access-token:${{ steps.generate-token.outputs.token }}@github.com/${{ github.repository }}.git
+            git push
+          else
+            echo "No changes to README.md detected."
+          fi
