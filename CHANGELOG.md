@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.2.2...v1.3.0) (2026-01-24)
+
+### Features
+
+* Bump tf ([#7](https://github.com/gucio1200/azure-tf-aks/issues/7)) ([1e92634](https://github.com/gucio1200/azure-tf-aks/commit/1e9263402310c14a0e39b54be6c850273cd53d94))
+
 ## [1.2.2](https://github.com/gucio1200/azure-tf-aks/compare/v1.2.1...v1.2.2) (2026-01-24)
 
 ### Bug Fixes
