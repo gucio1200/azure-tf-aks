@@ -6,7 +6,7 @@ repos:
       - id: terraform_docs
         args:
           - '--args=--lockfile=false'
-          - '--args=--output-mode=replace'
+          - '--args=--output-mode=inject'
           - '--hook-config=--path-to-file=README.md'
           - '--hook-config=--add-to-existing-file=true'
           - '--hook-config=--create-file-if-not-exist=true'
