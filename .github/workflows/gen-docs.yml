@@ -10,7 +10,7 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
@@ -24,7 +24,7 @@ jobs:
 
       - name: Cache terraform-docs
         id: cache-tf-docs
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ${{ env.TF_DOCS_PATH }}
           key: terraform-docs-${{ runner.os }}-${{ env.TERRAFORM_DOCS_VERSION }}
