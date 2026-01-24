@@ -2,11 +2,15 @@ name: Generate Terraform Docs
 on:
   - pull_request
 
+env:
+  TERRAFORM_DOCS_VERSION: v0.20.0
+  TF_DOCS_PATH: ${{ github.workspace }}/.bin/terraform-docs
+
 jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
@@ -18,18 +22,27 @@ jobs:
           private-key: ${{ secrets.app_private_key }}
           owner: ${{ github.repository_owner }}
 
+      - name: Cache terraform-docs
+        id: cache-tf-docs
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.TF_DOCS_PATH }}
+          key: terraform-docs-${{ runner.os }}-${{ env.TERRAFORM_DOCS_VERSION }}
+
       - name: Install terraform-docs
+        if: steps.cache-tf-docs.outputs.cache-hit != 'true'
         run: |
-          # Download to the runner's temp directory to avoid polluting the workspace
-          # Using v0.19.0 as a stable default, adjust version if needed
-          curl -Lo "$RUNNER_TEMP/terraform-docs.tar.gz" https://github.com/terraform-docs/terraform-docs/releases/download/v0.20.0/terraform-docs-v0.20.0-$(uname)-amd64.tar.gz
-          tar -xzf "$RUNNER_TEMP/terraform-docs.tar.gz" -C "$RUNNER_TEMP"
-          chmod +x "$RUNNER_TEMP/terraform-docs"
+          mkdir -p $(dirname ${{ env.TF_DOCS_PATH }})
+          curl -Lo tf-docs.tar.gz https://github.com/terraform-docs/terraform-docs/releases/download/${{ env.TERRAFORM_DOCS_VERSION }}/terraform-docs-${{ env.TERRAFORM_DOCS_VERSION }}-$(uname)-amd64.tar.gz
+          tar -xzf tf-docs.tar.gz terraform-docs
+          mv terraform-docs ${{ env.TF_DOCS_PATH }}
+          chmod +x ${{ env.TF_DOCS_PATH }}
+          rm tf-docs.tar.gz
 
       - name: Render terraform docs
         run: |
-          # Run the binary from temp
-          "$RUNNER_TEMP/terraform-docs" markdown table \
+          # Use the cached binary path
+          "${{ env.TF_DOCS_PATH }}" markdown table \
             --output-file README.md \
             --output-mode inject \
             .
@@ -40,9 +53,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Explicitly stage ONLY README.md
+          # Explicitly stage ONLY README.md to ignore the .bin folder
           git add README.md
-          # Check if there are changes staged for commit
           if ! git diff --cached --exit-code; then
             git commit -m "docs: Update README.md"
             git config --local --unset-all http.https://github.com/.extraheader || true
