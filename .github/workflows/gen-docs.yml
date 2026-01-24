@@ -5,13 +5,18 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
     - uses: actions/checkout@v5
       with:
         ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Generate Token
+        uses: actions/create-github-app-token@v1.12.0
+        id: generate-token
+        with:
+          app-id: ${{ secrets.app_id }}
+          private-key: ${{ secrets.app_private_key }}
+          owner: ${{ github.repository_owner }}
 
     - name: Render terraform docs and push changes back to PR
       uses: terraform-docs/gh-actions@v1.4.1
@@ -19,4 +24,13 @@ jobs:
         working-dir: .
         output-file: README.md
         output-method: inject
-        git-push: "true"
+        git-push: false
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git commit -am "docs: update README.md"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
