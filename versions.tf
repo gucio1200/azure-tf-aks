@@ -1,6 +1,6 @@
 terraform {
   # Wymagana minimalna wersja samego Terraform CLI
-  required_version = ">= 1.5.0"
+  required_version = ">= 1.5.0, < 1.9.0"
 
   required_providers {
     azurerm = {
