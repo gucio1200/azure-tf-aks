@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.3.0...v1.4.0) (2026-01-24)
+
+### Features
+
+* Add cache for tf-docs ([#8](https://github.com/gucio1200/azure-tf-aks/issues/8)) ([efe72a5](https://github.com/gucio1200/azure-tf-aks/commit/efe72a5c78039f07722093f2346098c71c66bab0))
+
 ## [1.3.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.2.2...v1.3.0) (2026-01-24)
 
 ### Features
