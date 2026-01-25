@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.4.0...v1.5.0) (2026-01-25)
+
+### Features
+
+* Move linter config to separate file ([#9](https://github.com/gucio1200/azure-tf-aks/issues/9)) ([930916f](https://github.com/gucio1200/azure-tf-aks/commit/930916fffc8dc13d7c21f75a4020e8e37011d441))
+
 ## [1.4.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.3.0...v1.4.0) (2026-01-24)
 
 ### Features
