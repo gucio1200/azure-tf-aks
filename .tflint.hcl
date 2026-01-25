@@ -5,7 +5,7 @@ config {
 }
 
 # --------------------------------------------------------------------
-# Plugin Configuration (Must be top-level)
+# Plugin Configuration
 # --------------------------------------------------------------------
 plugin "azurerm" {
   enabled = true
@@ -31,13 +31,8 @@ rule "terraform_standard_module_structure" { enabled = true }
 rule "terraform_workspace_remote" { enabled = true }
 
 # --------------------------------------------------------------------
-# Recommended: Enable all default Azure rules
-# --------------------------------------------------------------------
 # This enables all rules from the "azurerm" plugin.
 # You can disable specific ones if needed.
 # For example:
 # rule "azurerm_storage_account_enforce_https" { enabled = false }
 # --------------------------------------------------------------------
-rule "azurerm_*" {
-  enabled = true
-}
