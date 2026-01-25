@@ -1,10 +1,16 @@
 config {
-  # Enable the Azure provider plugin
-  plugin "azurerm" {
-    enabled = true
-    version = "0.29.0" # You can pin to a specific version
-    source  = "github.com/terraform-linters/tflint-ruleset-azurerm"
-  }
+  # You can add core configuration here if needed, e.g.:
+  # module = true
+  # force = false
+}
+
+# --------------------------------------------------------------------
+# Plugin Configuration (Must be top-level)
+# --------------------------------------------------------------------
+plugin "azurerm" {
+  enabled = true
+  version = "0.30.0"
+  source  = "github.com/terraform-linters/tflint-ruleset-azurerm"
 }
 
 # --------------------------------------------------------------------
