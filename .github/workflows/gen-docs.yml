@@ -1,4 +1,4 @@
-name: Generate Terraform Docs
+name: Generate Docs
 on:
   - pull_request
 
@@ -7,7 +7,8 @@ env:
   TF_DOCS_PATH: ${{ github.workspace }}/.bin/terraform-docs
 
 jobs:
-  docs:
+  main:
+    name: Generate Docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
