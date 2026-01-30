@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.1](https://github.com/gucio1200/azure-tf-aks/compare/v1.5.0...v1.5.1) (2026-01-30)
+
+### Bug Fixes
+
+* Clean, exchange tag to sa ([59a6e7b](https://github.com/gucio1200/azure-tf-aks/commit/59a6e7b7405e16e55e2629d20f8ebfce57f01692))
+
 ## [1.5.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.4.0...v1.5.0) (2026-01-25)
 
 ### Features
