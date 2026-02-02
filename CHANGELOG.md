@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.2](https://github.com/gucio1200/azure-tf-aks/compare/v1.5.1...v1.5.2) (2026-02-02)
+
+### Bug Fixes
+
+* Exchange vars desc and outputs to eng ([#11](https://github.com/gucio1200/azure-tf-aks/issues/11)) ([9657265](https://github.com/gucio1200/azure-tf-aks/commit/96572653798ef5a202ae184f05fb3f4510d7cedd))
+
 ## [1.5.1](https://github.com/gucio1200/azure-tf-aks/compare/v1.5.0...v1.5.1) (2026-01-30)
 
 ### Bug Fixes
