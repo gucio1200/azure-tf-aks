@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.7.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.6.0...v1.7.0) (2026-02-02)
+
+### Features
+
+* For both pre-commit/pre-commit-hooks, antonbabenko/pre-commit-terraform pin digest. ([b4b0bb6](https://github.com/gucio1200/azure-tf-aks/commit/b4b0bb6e4807daff51380f78aebe11ddb71e3c25))
+* Reconfigure renovate to prune stail branches ([ef7f2e6](https://github.com/gucio1200/azure-tf-aks/commit/ef7f2e64f55aee66fed9df6e43346cb617190305))
+
+### Bug Fixes
+
+* Add digest... ([c68501f](https://github.com/gucio1200/azure-tf-aks/commit/c68501f36ae67405ccfda14b7ab950ba57a583d9))
+* add new commit message ([0673002](https://github.com/gucio1200/azure-tf-aks/commit/0673002adc75afe075f55eded3f860917ad02dc3))
+* change updateType to digest for pre-commits ([66a4c81](https://github.com/gucio1200/azure-tf-aks/commit/66a4c810bb33b3bdfa308b8806967b1b72aefa6c))
+* clean renovate and pre-commit config ref ([85a17f7](https://github.com/gucio1200/azure-tf-aks/commit/85a17f7c302ff3f3e3fbf15d0864444d0eda102f))
+* Downgrade pre-commit, for testing ([d6a55ad](https://github.com/gucio1200/azure-tf-aks/commit/d6a55ad2f2a48567b8861debb17e12cc914ad26d))
+* enforce it harder ([1e96c31](https://github.com/gucio1200/azure-tf-aks/commit/1e96c31b36bd413af1934d68522e10d6c284f908))
+* extends :final ([7571b71](https://github.com/gucio1200/azure-tf-aks/commit/7571b717485bd9ccdf5ea055df1c8451c516785c))
+* now ? ([45540b4](https://github.com/gucio1200/azure-tf-aks/commit/45540b48e78d13cc2c6908ae1064b130ec715abd))
+* now will it work ? ([00f97c3](https://github.com/gucio1200/azure-tf-aks/commit/00f97c3477cb784a650fdef1ac4a5f21a2439165))
+* Ref to pre-commit hooks ([23be27a](https://github.com/gucio1200/azure-tf-aks/commit/23be27ac8c20d63e34ba452c1b6bacfbacb17406))
+* temp disable cleanup ([17697e0](https://github.com/gucio1200/azure-tf-aks/commit/17697e07dd7534b80f63c3e7897caf453eb91ffd))
+* try use diff package manager for pre-commit ([8d68166](https://github.com/gucio1200/azure-tf-aks/commit/8d6816668c9a462285b3737b71b9bc239a431a40))
+
 ## [1.6.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.5.2...v1.6.0) (2026-02-02)
 
 ### Features
