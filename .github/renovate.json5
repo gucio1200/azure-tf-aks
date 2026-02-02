@@ -3,6 +3,11 @@
   extends: [
     "github>gucio1200/renovate-config",
   ],
-  "commitMessageLowerCase": "never",
-  "commitMessageAction": "Update"
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "commitMessageAction": "Update",
+      "commitMessageLowerCase": "never"
+    }
+  ]
 }
