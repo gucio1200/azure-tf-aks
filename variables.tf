@@ -9,7 +9,7 @@ variable "location" {
 }
 
 variable "cluster_name" {
-  description = "Name of the cluster"
+  description = "Name of the Amazon AKS cluster"
   type        = string
 }
 
