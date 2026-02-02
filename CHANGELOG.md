@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.5.2...v1.6.0) (2026-02-02)
+
+### Features
+
+* **deps:** Update Terraform hashicorp/terraform ( 1.11.4 → 1.14.4 ) ([#19](https://github.com/gucio1200/azure-tf-aks/issues/19)) ([b574889](https://github.com/gucio1200/azure-tf-aks/commit/b574889360b4fca47c9da55817b1a6273df2c957))
+
+### Bug Fixes
+
+* Add renovate config ([06fad95](https://github.com/gucio1200/azure-tf-aks/commit/06fad953f8f26c23a02aae86d5581907b667896e))
+* Renovate config for widen terraform version ([a42dce5](https://github.com/gucio1200/azure-tf-aks/commit/a42dce574f57136ff89a449f36718d8a40cf3862))
+
 ## [1.5.2](https://github.com/gucio1200/azure-tf-aks/compare/v1.5.1...v1.5.2) (2026-02-02)
 
 ### Bug Fixes
