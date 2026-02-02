@@ -22,7 +22,5 @@
       "matchPackageNames": ["pre-commit-hooks"],
       "pinDigests": true
     }
-  ],
-  "pruneStaleBranch": true,
-  "dependencyDashboardAutoclose": true
+  ]
 }
