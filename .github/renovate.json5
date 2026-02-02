@@ -8,6 +8,11 @@
       "matchPackagePatterns": ["*"],
       "commitMessageAction": "Update",
       "commitMessageLowerCase": "never"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["required_version"],
+      "rangeStrategy": "widen"
     }
   ]
 }
