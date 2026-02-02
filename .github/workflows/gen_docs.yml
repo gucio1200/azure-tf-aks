@@ -2,7 +2,17 @@
 name: "TF Docs"
 
 on:
-  - pull_request
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '**/*.tpl'
+      - '**/*.tmpl'
+      - '**/*.py'
+      - '**/*.tf'
+      - '**/*.tfvars'
 
 jobs:
   Docs:
