@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.7.0...v2.0.0) (2026-02-02)
+
+### ⚠ BREAKING CHANGES
+
+* **github-action:** Update gucio1200/gh-workflows action ( v6.1.2 → v7.0.0 ) (#30)
+
+### Bug Fixes
+
+* Update gen_docs.yml ([28f4ada](https://github.com/gucio1200/azure-tf-aks/commit/28f4ada49d128ca27f43cf103d59b60fa86ebf5f))
+
+### Continuous Integration
+
+* **github-action:** Update gucio1200/gh-workflows action ( v6.1.2 → v7.0.0 ) ([#30](https://github.com/gucio1200/azure-tf-aks/issues/30)) ([bb2ca40](https://github.com/gucio1200/azure-tf-aks/commit/bb2ca40e9942a04012038ec6bd0eef47cb3cfa84))
+
 ## [1.7.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.6.0...v1.7.0) (2026-02-02)
 
 ### Features
