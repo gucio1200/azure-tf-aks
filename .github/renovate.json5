@@ -16,9 +16,8 @@
     },
     {
       "matchManagers": ["pre-commit"],
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
-      "pinDigests": true,
-      "commitMessageExtra": "( {{currentDigest}} → {{newDigest}} )"
+      "updateType": "digest",
+      "pinDigests": true
     }
   ]
 }
