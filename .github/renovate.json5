@@ -18,5 +18,7 @@
       "matchPackageNames": ["pre-commit/pre-commit-hooks", "antonbabenko/pre-commit-terraform"],
       "pinDigests": true
     }
-  ]
+  ],
+  "pruneStaleBranch": true,
+  "dependencyDashboardAutoclose": true,
 }
