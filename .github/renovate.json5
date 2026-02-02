@@ -15,9 +15,13 @@
       "rangeStrategy": "widen"
     },
     {
-      "extends": [":final"],
       "matchManagers": ["pre-commit"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
       "pinDigests": true
+    },
+    {
+      "matchManagers": ["pre-commit"],
+      "commitMessageExtra": "( {{currentDigestShort}} → {{newDigestShort}} )"
     }
   ]
 }
