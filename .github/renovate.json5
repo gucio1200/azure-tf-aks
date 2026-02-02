@@ -13,11 +13,6 @@
       "matchManagers": ["terraform"],
       "matchDepTypes": ["required_version"],
       "rangeStrategy": "widen"
-    },
-    {
-      "matchManagers": ["pre-commit"],
-      "updateType": "digest",
-      "pinDigests": true
     }
   ]
 }
