@@ -7,8 +7,8 @@ on:
 
 jobs:
   Stale:
-    uses: gucio1200/gh-workflows/.github/workflows/general_stale.yml@v6.1.0
+    uses: gucio1200/gh-workflows/.github/workflows/general_stale.yml@v6.1.1
     secrets: inherit
   Lock:
-    uses: gucio1200/gh-workflows/.github/workflows/general_lock.yml@v6.1.0
+    uses: gucio1200/gh-workflows/.github/workflows/general_lock.yml@v6.1.1
     secrets: inherit
