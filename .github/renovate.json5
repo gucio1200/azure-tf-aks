@@ -15,11 +15,7 @@
       "rangeStrategy": "widen"
     },
     {
-      "matchPackageNames": ["antonbabenko/pre-commit-terraform"],
-      "pinDigests": true
-    },
-    {
-      "matchPackageNames": ["pre-commit/pre-commit-hooks"],
+      "matchManagers": ["pre-commit"],
       "pinDigests": true
     }
   ]
