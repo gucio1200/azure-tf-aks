@@ -1,0 +1,14 @@
+---
+name: "PR Validate"
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  Validate:
+    uses: gucio1200/gh-workflows/.github/workflows/general_pr-title.yml@v6.0.0
+    secrets: inherit

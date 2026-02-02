@@ -1,0 +1,19 @@
+---
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '**/*.tpl'
+      - '**/*.tmpl'
+      - '**/*.py'
+      - '**/*.tf'
+
+jobs:
+  Release:
+    uses: gucio1200/gh-workflows/.github/workflows/general_release.yml@v6.0.0
+    secrets: inherit
