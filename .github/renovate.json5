@@ -15,10 +15,14 @@
       "rangeStrategy": "widen"
     },
     {
-      "matchPackageNames": ["https://github.com/pre-commit/pre-commit-hooks", "https://github.com/antonbabenko/pre-commit-terraform"],
+      "matchPackageNames": ["pre-commit-terraform"],
+      "pinDigests": true
+    },
+    {
+      "matchPackageNames": ["pre-commit-hooks"],
       "pinDigests": true
     }
   ],
   "pruneStaleBranch": true,
-  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardAutoclose": true
 }
