@@ -1,0 +1,10 @@
+---
+name: "TF Docs"
+
+on:
+  - pull_request
+
+jobs:
+  Docs:
+    uses: gucio1200/gh-workflows/.github/workflows/terraform_gen-doc.yml@v6.0.0
+    secrets: inherit

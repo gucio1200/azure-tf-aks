@@ -1,0 +1,14 @@
+---
+name: "Lock or Stale"
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  Stale:
+    uses: gucio1200/gh-workflows/.github/workflows/general_stale.yml@v6.0.0
+    secrets: inherit
+  Lock:
+    uses: gucio1200/gh-workflows/.github/workflows/general_lock.yml@v6.0.0
+    secrets: inherit

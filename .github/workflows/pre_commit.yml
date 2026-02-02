@@ -1,0 +1,13 @@
+---
+name: Pre-Commit
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  Pre-commit:
+    uses: gucio1200/gh-workflows/.github/workflows/terraform_pre-commit.yml@v6.0.0
+    secrets: inherit
