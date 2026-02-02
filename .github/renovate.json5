@@ -2,5 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
     "github>gucio1200/renovate-config",
-  ]
+  ],
+  "commitMessageLowerCase": "never",
+  "commitMessageAction": "Update"
 }
