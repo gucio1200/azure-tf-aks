@@ -10,5 +10,5 @@ on:
 
 jobs:
   Validate:
-    uses: gucio1200/gh-workflows/.github/workflows/general_pr-title.yml@v7.1.3
+    uses: gucio1200/gh-workflows/.github/workflows/general_pr-title.yml@v7.1.4
     secrets: inherit
