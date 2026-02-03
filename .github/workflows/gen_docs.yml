@@ -1,9 +1,8 @@
 ---
-name: "TF Docs"
+name: "TF Docs Generate"
 
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
     branches:
       - main
       - master
@@ -16,5 +15,5 @@ on:
 
 jobs:
   Docs:
-    uses: gucio1200/gh-workflows/.github/workflows/terraform_gen-doc.yml@v7.0.2
+    uses: gucio1200/gh-workflows/.github/workflows/terraform_gen-doc.yml@v7.1.0
     secrets: inherit
