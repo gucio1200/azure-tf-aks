@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0](https://github.com/gucio1200/azure-tf-aks/compare/v2.0.0...v2.1.0) (2026-02-03)
+
+### Features
+
+* Create docs in PR. ([64e27a3](https://github.com/gucio1200/azure-tf-aks/commit/64e27a344ce773290a544996551cf67a7c93a6e1))
+
 ## [2.0.0](https://github.com/gucio1200/azure-tf-aks/compare/v1.7.0...v2.0.0) (2026-02-02)
 
 ### ⚠ BREAKING CHANGES
