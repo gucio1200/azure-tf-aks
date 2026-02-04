@@ -10,8 +10,8 @@ on:
     paths:
       - '**/*.tpl'
       - '**/*.tmpl'
-      - '**/*.py'
       - '**/*.tf'
+      - '**/*.tfvars'
 
 jobs:
   Release:
