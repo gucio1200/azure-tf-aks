@@ -15,5 +15,5 @@ on:
 
 jobs:
   Release:
-    uses: gucio1200/gh-workflows/.github/workflows/general_release.yml@v7.3.0
+    uses: gucio1200/gh-workflows/.github/workflows/general_release.yml@v7.4.0
     secrets: inherit
