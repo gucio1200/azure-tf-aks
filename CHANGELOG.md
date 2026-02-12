@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.0](https://github.com/gucio1200/azure-tf-aks/compare/v2.1.0...v2.2.0) (2026-02-12)
+
+### Features
+
+* Change provider ([#36](https://github.com/gucio1200/azure-tf-aks/issues/36)) ([47563ad](https://github.com/gucio1200/azure-tf-aks/commit/47563ad723487e3f52a2d55ca908645467b88ff5))
+* Restrict trigger ([#34](https://github.com/gucio1200/azure-tf-aks/issues/34)) ([23a0b7b](https://github.com/gucio1200/azure-tf-aks/commit/23a0b7bb53e10acbd1ad585abe54b84b321f6c3f)), closes [#32](https://github.com/gucio1200/azure-tf-aks/issues/32)
+
+### Bug Fixes
+
+* Create dep for stale/lock ([f407372](https://github.com/gucio1200/azure-tf-aks/commit/f4073723a7e19b62dc6c1a9fd0261b07353ddab4))
+
 ## [2.1.0](https://github.com/gucio1200/azure-tf-aks/compare/v2.0.0...v2.1.0) (2026-02-03)
 
 ### Features
