@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.0](https://github.com/gucio1200/azure-tf-aks/compare/v2.2.0...v2.3.0) (2026-02-12)
+
+### Features
+
+* **deps:** Update Terraform hashicorp/terraform ( 1.13.5 → 1.14.5 ) ([#37](https://github.com/gucio1200/azure-tf-aks/issues/37)) ([d1fa3de](https://github.com/gucio1200/azure-tf-aks/commit/d1fa3de7a82816752864d954f843e679a8894d26))
+
 ## [2.2.0](https://github.com/gucio1200/azure-tf-aks/compare/v2.1.0...v2.2.0) (2026-02-12)
 
 ### Features
