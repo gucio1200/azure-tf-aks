@@ -7,8 +7,8 @@ on:
 jobs:
   action-lint:
     name: GH Action Lint
-    uses: gucio1200/gh-workflows/.github/workflows/linter_gh-action.yml@v7.4.1
+    uses: gucio1200/gh-workflows/.github/workflows/linter_gh-action.yml@v7.5.0
 
   yaml-lint:
     name: Yaml Lint
-    uses: gucio1200/gh-workflows/.github/workflows/linter_yaml.yml@v7.4.1
+    uses: gucio1200/gh-workflows/.github/workflows/linter_yaml.yml@v7.5.0
