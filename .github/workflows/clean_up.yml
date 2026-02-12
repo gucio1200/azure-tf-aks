@@ -7,10 +7,10 @@ on:
 
 jobs:
   Stale:
-    uses: gucio1200/gh-workflows/.github/workflows/general_stale.yml@v7.5.0
+    uses: gucio1200/gh-workflows/.github/workflows/general_stale.yml@v7.5.1
     secrets: inherit
 
   Lock:
     needs: Stale
-    uses: gucio1200/gh-workflows/.github/workflows/general_lock.yml@v7.5.0
+    uses: gucio1200/gh-workflows/.github/workflows/general_lock.yml@v7.5.1
     secrets: inherit
