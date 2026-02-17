@@ -7,13 +7,13 @@ on:
       - main
       - master
     paths:
-      - '**/*.tpl'
-      - '**/*.tmpl'
-      - '**/*.py'
-      - '**/*.tf'
-      - '**/*.tfvars'
+      - "**/*.tpl"
+      - "**/*.tmpl"
+      - "**/*.py"
+      - "**/*.tf"
+      - "**/*.tfvars"
 
 jobs:
   Docs:
-    uses: gucio1200/gh-workflows/.github/workflows/terraform_gen-doc.yml@v7.7.2
+    uses: gucio1200/gh-workflows/.github/workflows/terraform_gen-doc.yml@v7.10.0
     secrets: inherit

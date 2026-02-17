@@ -33,7 +33,7 @@ No modules.
 | <a name="input_kubernetes_version"></a> [kubernetes\_version](#input\_kubernetes\_version) | Kubernetes version | `string` | `"1.29"` | no |
 | <a name="input_location"></a> [location](#input\_location) | Azure location (region) | `string` | n/a | yes |
 | <a name="input_node_count"></a> [node\_count](#input\_node\_count) | Initial number of nodes | `number` | `2` | no |
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group where the AKS will be created | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group where the AKS'ss will be created | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags to assign to resources | `map(string)` | `{}` | no |
 | <a name="input_vm_size"></a> [vm\_size](#input\_vm\_size) | Virtual machine size for the nodes | `string` | `"Standard_D2_v2"` | no |
 
