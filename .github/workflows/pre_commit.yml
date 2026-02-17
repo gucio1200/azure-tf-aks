@@ -9,5 +9,5 @@ on:
 
 jobs:
   Pre-commit:
-    uses: gucio1200/gh-workflows/.github/workflows/terraform_pre-commit.yml@v7.9.0
+    uses: gucio1200/gh-workflows/.github/workflows/terraform_pre-commit.yml@v7.10.1
     secrets: inherit
