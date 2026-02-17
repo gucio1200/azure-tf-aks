@@ -1,5 +1,5 @@
 variable "resource_group_name" {
-  description = "Name of the resource group where the AKS will be created"
+  description = "Name of the resource group where the AKS's will be created"
   type        = string
 }
 
