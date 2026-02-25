@@ -15,5 +15,5 @@ on:
 
 jobs:
   Docs:
-    uses: gucio1200/gh-workflows/.github/workflows/terraform_gen-doc.yml@v7.14.0
+    uses: gucio1200/gh-workflows/.github/workflows/terraform_gen-doc.yml@v7.14.1
     secrets: inherit
